@@ -1,6 +1,6 @@
 # 🇵🇰 Pakistan Crime Analytics & Forecasting System
 
-A data-powered Streamlit dashboard to **analyze and forecast crime trends** in Pakistan (2010–2025).  
+A data-powered Streamlit dashboard to **analyze and forecast crime trends** in Pakistan (2010–2020).  
 Built for data storytelling, insight generation, and impactful visualization.
 
 <p align="center">
@@ -68,6 +68,10 @@ pip install -r requirements.txt
 # 3. Launch app
 streamlit run app.py
 
+```
+
+---
+
 
 ## ✅ Test It
 
@@ -75,6 +79,7 @@ Run the simple forecast validation script:
 
 ```bash
 python test_case.py
+```
 
 ---
 
