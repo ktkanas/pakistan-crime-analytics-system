@@ -3,8 +3,12 @@ import pandas as pd
 import plotly.express as px
 
 # Load data
-cleaned_path = r"C:\Users\DELL\Desktop\Pakistan Crime Analytics & Forecasting System\Dataset\cleaned_crime_data.csv"
-forecast_path = r"C:\Users\DELL\Desktop\Pakistan Crime Analytics & Forecasting System\Dataset\forecasted_crime_2021_2025.csv"
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+cleaned_path = os.path.join(BASE_DIR, "Dataset", "cleaned_crime_data.csv")
+forecast_path = os.path.join(BASE_DIR, "Dataset", "forecasted_crime_2021_2025.csv")
+
 
 
 df = pd.read_csv(cleaned_path)
