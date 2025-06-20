@@ -116,4 +116,3 @@ if st.button("🧾 Generate PDF Report"):
             file_name="crime_report.pdf",
             mime="application/pdf"
         )
-
