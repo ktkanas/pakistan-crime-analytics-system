@@ -99,13 +99,21 @@ def generate_pdf_download():
     return buffer
 
 # 🧾 PDF Download Button in Streamlit UI
-from generate_report import generate_pdf_report
 import os
+from generate_report import generate_pdf_report
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 cleaned_path = os.path.join(BASE_DIR, "Dataset", "cleaned_crime_data.csv")
 forecast_path = os.path.join(BASE_DIR, "Dataset", "forecasted_crime_2021_2025.csv")
 output_path = os.path.join(BASE_DIR, "crime_report.pdf")
 
-# Call the report generator
-generate_pdf_report(cleaned_path, forecast_path, output_path)
+if st.button("🧾 Generate PDF Report"):
+    generate_pdf_report(cleaned_path, forecast_path, output_path)
+    with open(output_path, "rb") as f:
+        st.download_button(
+            label="📥 Download PDF",
+            data=f,
+            file_name="crime_report.pdf",
+            mime="application/pdf"
+        )
+
