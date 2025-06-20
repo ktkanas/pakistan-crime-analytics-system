@@ -13,7 +13,7 @@ Built for data storytelling, insight generation, and impactful visualization.
 
 ## 🔗 Live Demo
 
-🌐 **Streamlit App**: [Click to View](https://yourusername-pakistan-crime.streamlit.app)  
+🌐 **Streamlit App**: [Click to View](https://pakistan-crime-analytics-system.streamlit.app)  
 💻 **GitHub Repo**: [Click to View](https://github.com/ktkanas/pakistan-crime-analytics-system)
 
 > ⚠️ Replace the above links once deployed
