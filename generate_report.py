@@ -58,10 +58,13 @@ def generate_pdf_report(cleaned_path, forecast_path, output_path="crime_report.p
 
     c.save()
     print(f"✅ PDF report saved as: {output_path}")
-from generate_report import generate_pdf_report
+import os
+import pandas as pd
+from reportlab.pdfgen import canvas
+# (keep your other imports too)
 
-generate_pdf_report(
-    cleaned_path=r"C:\Users\DELL\Desktop\Pakistan Crime Analytics & Forecasting System\Dataset\cleaned_crime_data.csv",
-    forecast_path=r"C:\Users\DELL\Desktop\Pakistan Crime Analytics & Forecasting System\Dataset\forecasted_crime_2021_2025.csv",
-    output_path=r"C:\Users\DELL\Desktop\Pakistan Crime Analytics & Forecasting System\crime_report.pdf"
-)
+# Dynamically get base directory
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+cleaned_path = os.path.join(BASE_DIR, "Dataset", "cleaned_crime_data.csv")
+forecast_path = os.path.join(BASE_DIR, "Dataset", "forecasted_crime_2021_2025.csv")
+output_path = os.path.join(BASE_DIR, "crime_report.pdf")
